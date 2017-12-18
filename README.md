@@ -1,8 +1,16 @@
-# Archeology-of-the-Present
-# Sand Box and projection mapping
+/*
+	# Archeology-of-the-Present
+  Sand Box and projection mapping
+	Archeology of the Present; San Box, is a sensitive surface structure with photo resistors coupled in six groups of three.
+  The code calls out video projections to be played on top of the sand. Tanner Settles as creator, with help from Nathan Villicana-Shaw and Bibiana Bauer.
 
-// Archeology of the Present; San Box, is a sensitive surface structure with photo resistors coupled in six groups of three.
-// The code calls out video projections to be played on top of the sand. Tanner Settles as creator, with help from Nathan Villicana-Shaw and Bibiana Bauer.
+	The circuit:
+	* 3 10k photo resistors are combined as 1 of 6 units (sensorValues) each circuited with one 100kresitors and linked into an analogInPin
+
+	12.09.2017
+	By Tanner Settles
+
+*/
 
 import processing.serial.*;
 import cc.arduino.*;
@@ -73,7 +81,7 @@ void draw() {
   sensorValue5 = arduino.analogRead(analogInPin5);
   sensorValue6 = arduino.analogRead(analogInPin6);
 
-  //  if the sensoValue1 is greater than the threshhold ("thresh[0]") of [550] meaning exposer to light with a measuring greater than 550, will play the video file 0
+  //  if the sensoValue1 is greater than the threshhold ("thresh[0]") of [550] meaning exposer to light with a measuring greater than 550, will play the video file 0 
   if (sensorValue1 > thresh[0]) {
     // testing the sensorValue readings 
     // fill(255, 0, 0);
